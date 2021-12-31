@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -103,13 +104,13 @@
 }
 #qtn{
     color: cyan;
-     width: 25%; 
-     background-color: rgb(38, 212, 212); 
-     height: 50%; 
+    /* width: 25%; */
+    /* background-color: rgb(38, 212, 212); */
+    /* height: 50%; */
     border-radius: 5px;
-    font-size : 50px;
-     margin-left: 35%; 
-     text-align:center ;
+    font-size: 50px;
+    /* margin-left: 35%; */
+    /* text-align:center */
 
 }
 </style>
@@ -158,6 +159,42 @@
 </div>
 <!-- END OF TEMPLATE -->
 
+<button id="Question1" class="collapsible">Reverse a Given Number</button>
+<div class="content" style="display:flex">
+  <div class="embed-responsive embed-responsive-16by9 video1"   style="    background-color: #272822;" >
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; " src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+  </div>
+  <div class=codediv1-container ><button id="mybtn" class="container"  onclick="copy_data(select_txt)";  >Copy Code</button>
+    <pre  id="select_txt" style="color: white;" >
+    #include&#60;iostream&#62;
+    using namespace std;
+    int main()
+    {
+      int n, reverse = 0, rem;
+      cout << "Enter a number: ";
+      cin >> n;
+      while (n != 0)
+      {
+          rem = n % 10; 
+          reverse = reverse * 10 + rem;
+          n = n/10; 
+      }
+      cout << "Reversed Number: " << reverse << endl;
+      return 0;
+    }
+    </pre>
+  </div>
+
+
+</div>
+</div>
+</div></div>
+</div>
+
+<script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UCQ96RPiohmwUzFXfwC_Gz2A" data-layout="full" data-count="hidden"></div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
@@ -187,5 +224,42 @@ function copy_data(containerid) {
 }
 </script>
 
-</body>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 </html>
