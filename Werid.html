@@ -7,7 +7,8 @@
 <style>
   *{
     background-color: #022b30;
-
+     /* width:max-content;  */
+    /* font-size: 10px; */
   } 
   .chamak{
     border: 5px inset;
@@ -66,7 +67,6 @@
   background-color: cyan;
   
   display: inline;
-  margin-left: 78%;
 }
 .content {
   padding: 0 18px;
@@ -103,13 +103,13 @@
 }
 #qtn{
     color: cyan;
-     width: 25%; 
-     background-color: rgb(38, 212, 212); 
-     height: 50%; 
+    / width: 25%; /
+    / background-color: rgb(38, 212, 212); /
+    / height: 50%; /
     border-radius: 5px;
-    font-size : 50px;
-     margin-left: 35%; 
-     text-align:center ;
+    font-size: 50px;
+    / margin-left: 35%; /
+    / text-align:center /
 
 }
 </style>
@@ -157,6 +157,40 @@
 </div></div>
 </div>
 <!-- END OF TEMPLATE -->
+
+<button id="Question1" class="collapsible">Reverse a Given Number</button>
+<div class="content" style="display:flex">
+  <div class="embed-responsive embed-responsive-16by9 video1"   style="    background-color: #272822;" >
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; " src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+  </div>
+  <div class=codediv1-container ><button id="mybtn" class="container"  onclick="copy_data(select_txt)";  >Copy Code</button>
+    <pre  id="select_txt" style="color: white;" >
+    #include&#60;iostream&#62;
+    using namespace std;
+    int main()
+    {
+      int n, reverse = 0, rem;
+      cout << "Enter a number: ";
+      cin >> n;
+      while (n != 0)
+      {
+          rem = n % 10; 
+          reverse = reverse * 10 + rem;
+          n = n/10; 
+      }
+      cout << "Reversed Number: " << reverse << endl;
+      return 0;
+    }
+    </pre>
+  </div>
+
+
+</div>
+</div>
+</div></div>
+</div>
+
 
 
 <script>
