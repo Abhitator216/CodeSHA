@@ -1,134 +1,260 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-  *{
-    background-color: #022b30;
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    * {
+      background-color: #022b30;
 
-  } 
-  .chamak{
-    border: 5px inset;
-    border-radius: 5px;
-  }
-.collapsible {
-  background-color: #3f71b2;
-  margin-bottom: 8px;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 18px;
-}
+    }
 
-.active, .collapsible:hover {
-  background-color: #93bd20;
-}
+    .chamak {
+      border: 5px inset;
+      border-radius: 5px;
+    }
 
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-@media only screen and (max-width: 600px) {
-  #select_txt{
-    font-size: 12px;
-  }
-  iframe{
+    .collapsible {
+      background-color: #3f71b2;
+      margin-bottom: 8px;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+    }
+
+    .active,
+    .collapsible:hover {
+      background-color: #93bd20;
+    }
+
+    .collapsible:after {
+      content: '\002B';
+      color: white;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      #select_txt {
+        font-size: 12px;
+
+      }
+
+      #qtn {
+        font-size: 2em;
+      }
+
+      iframe {
+        width: fit-content;
+
+        height: fit-content;
+      }
+
+      #mybtn {
+        margin-left: 14em;
+      }
+    }
+
+    /* @media only screen and (max-width: 700px) {
+  #subbtn {
+  position: absolute;
     width: fit-content;
-
     height: fit-content;
-  }
-}
-@media only screen and (min-width: 600px) {
-  #select_txt{
-    font-size: 21px;
-  }
-}
+    bottom: 0%;
+    right: 5%;
+            }
+} */
+    @media only screen and (min-width: 600px) {
+      #qtn {
+        font-size: 3.1em;
+      }
 
-.active:after {
-  content: "\2212";
-}
+      #select_txt {
+        font-size: 21px;
+      }
 
-#mybtn{
-  border-radius:5px ; 
-  width: 130px; 
-  height: 30px;
-  
-  background-color: cyan;
-  
-  display: inline;
-  margin-left: 78%;
-}
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #272822;
-  justify-content: center;
-  flex-wrap: wrap;
-  justify-content:  space-around;
-}
-.code1{
-  font-size:  21px;
-  font-family: 'Courier Prime', monospace;
-  color: white;
- 
+      #mybtn {
+        margin-left: 78%;
+      }
+
+      /* #subbtn {
+  position: absolute;
+    width: fit-content;
+    height: fit-content;
+    bottom: 0%;
+    right: 35em;
+            } */
+    }
+
+    .active:after {
+      content: "\2212";
+    }
+
+    #mybtn {
+      border-radius: 5px;
+      width: 130px;
+      height: 30px;
+
+      background-color: cyan;
+
+      display: inline;
+
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      background-color: #272822;
+      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .code1 {
+      font-size: 21px;
+      font-family: 'Courier Prime', monospace;
+      color: white;
 
 
-}
-/* .video1{
+
+    }
+
+    /* .video1{
      margin-top: 85px;
      margin-left: 25px;
 } */
-.codediv1{
-  background-color: #1c1d14;
-  width: 50%;
-}
-.logo{
-  /* width:10%;
+    .codediv1 {
+      background-color: #1c1d14;
+      width: 50%;
+    }
+
+    .logo {
+      /* width:10%;
   height: 10%; */
-  display: inline;
-  width: 120px;
-   height: 90px;
-}
-#qtn{
-    color: cyan;
-    /* width: 25%; */
-    /* background-color: rgb(38, 212, 212); */
-    /* height: 50%; */
-    border-radius: 5px;
-    font-size: 50px;
-    /* margin-left: 35%; */
-    /* text-align:center */
+      display: inline;
+      width: 5em;
+    }
 
-}
-.text1{
-  color: cyan;
-  font-size: 23px;
- 
-}
-</style>
+    .logo1 {
+      /* width:10%;
+  height: 10%; */
+      display: inline;
+      height: 10%;
+      width: 37%;
+    }
+
+    #qtn {
+      color: cyan;
+      /* width: 25%; */
+      /* background-color: rgb(38, 212, 212); */
+      /* height: 50%; */
+      border-radius: 5px;
+      /* margin-left: 35%; */
+      /* text-align:center */
+
+    }
+
+    .text1 {
+      color: cyan;
+      font-size: 23px;
+      text-align: center;
+
+    }
+
+    #subbtn {
+      margin-top: 25%;
+      margin-left: 30%;
+    }
+
+    #dd {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    .marquee_code {
+      height: 50px;
+      width: 100%;
+      background-color: #022b30;
+      font-family: Georgia;
+      font-size: 20pt;
+      color: #022b30;
+
+      font-weight: bold;
+    }
+
+
+    .op {
+      width: fit-content;
+      background-color: cyan;
+      border-radius: 20px;
+      padding: 5px;
+    }
+  </style>
 </head>
+
 <body>
-  <span>
-  <img class="logo"  src="Code-sha-logo-modified.png" alt="Img">
-  <img class="logo" style="width:290px" src="Code-SHA-web.png" alt="Img">
-</span>
- <div  id="qtn" style="text-align:center">
-  <b>Questions:</b>
- </div>
 
- <!-- TEMPLATE OF QUESTION -->
+
+  <div id="dd">
+    <img class="logo" src="Code-sha-logo-modified.png" alt="Img">
+    <img class="logo1" style="width:290px" src="Code-SHA-web.png" alt="Img">
+  </div>
+
+  <div id="qtn" style="text-align:center">
+    <b>Questions:</b>
+  </div>
+
+  <!-- TEMPLATE OF QUESTION -->
+  <button id="Question1" class="collapsible">Reverse a Given Number</button>
+  <div class="content" style="display:flex">
+    
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "
+        src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    </div>
+    <div class=codediv1-container><button id="mybtn" class="container" onclick="copy_data(select_txt)" ;>Copy
+        Code</button>
+      <pre id="select_txt" style="color: white;">
+    #include&#60;iostream&#62;
+    using namespace std;
+    int main()
+    {
+      int n, reverse = 0, rem;
+      cout << "Enter a number: ";
+      cin >> n;
+      while (n != 0)
+      {
+          rem = n % 10; 
+          reverse = reverse * 10 + rem;
+          n = n/10; 
+      }
+      cout << "Reversed Number: " << reverse << endl;
+      return 0;
+    }
+    </pre>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE -->
+  <!-- 
 <button id="Question1" class="collapsible">Reverse a Given Number</button>
 <div class="content" style="display:flex">
   <div class="embed-responsive embed-responsive-16by9 video1"   style="    background-color: #272822;" >
@@ -161,75 +287,50 @@
 </div>
 </div></div>
 </div>
-<!-- END OF TEMPLATE -->
+ -->
 
-<button id="Question1" class="collapsible">Reverse a Given Number</button>
-<div class="content" style="display:flex">
-  <div class="embed-responsive embed-responsive-16by9 video1"   style="    background-color: #272822;" >
-    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; " src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
-  </div>
-  <div class=codediv1-container ><button id="mybtn" class="container"  onclick="copy_data(select_txt)";  >Copy Code</button>
-    <pre  id="select_txt" style="color: white;" >
-    #include&#60;iostream&#62;
-    using namespace std;
-    int main()
-    {
-      int n, reverse = 0, rem;
-      cout << "Enter a number: ";
-      cin >> n;
-      while (n != 0)
-      {
-          rem = n % 10; 
-          reverse = reverse * 10 + rem;
-          n = n/10; 
-      }
-      cout << "Reversed Number: " << reverse << endl;
-      return 0;
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
     }
-    </pre>
-  </div>
+    function copy_data(containerid) {
+      let range = document.createRange();
+      let referenceNode = document.getElementsByTagName('pre').item(0);
 
+      range.selectNode(referenceNode);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand("copy");
+      window.getSelection().removeAllRanges();
+      document.getElementById("mybtn").innerHTML = "COPIED";
+      document.getElementById("mybtn").style.backgroundColor = "rgb(138, 212, 209)";
 
-</div>
-</div>
-</div></div>
-</div>
-<div id="subbtn">
-  <span class="text1">Click on Youtube for more such Questions</span>
-  <script src="https://apis.google.com/js/platform.js"></script>
+    }
+  </script>
+  <marquee style="margin-top: 1%;" class="marquee_code" scrollamount="8" behavior="alternate" onmouseover="this.stop()"; 
+onmouseout ="this.start()";><div class=" op">&#60;&#60;&#60;&#60;More Questions are coming soon!!!&#62;&#62;&#62;&#62;
+    </div>
+  </marquee>
+  <span id="subbtn">
+    <span class="text1">Click on Youtube for more such Questions</span>
+    <script src="https://apis.google.com/js/platform.js"></script>
 
-<div class="g-ytsubscribe" data-channelid="UCQ96RPiohmwUzFXfwC_Gz2A" data-layout="default" data-theme="dark" data-count="hidden"></div>
-</div>
-
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-function copy_data(containerid) {
-  var range = document.createRange();
-  range.selectNode(containerid); //changed here
-  window.getSelection().removeAllRanges(); 
-  window.getSelection().addRange(range); 
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
-  document.getElementById("mybtn").innerHTML="COPIED";
-  document.getElementById("mybtn").style.backgroundColor="rgb(138, 212, 209)";
-   
-}
-</script>
+    <div class="g-ytsubscribe" data-channelid="UCQ96RPiohmwUzFXfwC_Gz2A" data-layout="default" data-theme="dark"
+      data-count="hidden"></div>
+  </span>
 
 </body>
+
 </html>
