@@ -46,10 +46,11 @@
     }
 
     @media only screen and (max-width: 600px) {
-      #select_txt {
+      #select_txt,#select_txt1,#select_txt2{
         font-size: 12px;
 
       }
+      
 
       #qtn {
         font-size: 2em;
@@ -61,7 +62,7 @@
         height: fit-content;
       }
 
-      #mybtn {
+      .mybtn {
         margin-left: 14em;
       }
     }
@@ -80,11 +81,11 @@
         font-size: 3.1em;
       }
 
-      #select_txt {
+      #select_txt,#select_txt1,#select_txt2  {
         font-size: 21px;
       }
 
-      #mybtn {
+      .mybtn {
         margin-left: 78%;
       }
 
@@ -101,7 +102,7 @@
       content: "\2212";
     }
 
-    #mybtn {
+    .mybtn {
       border-radius: 5px;
       width: 130px;
       height: 30px;
@@ -229,7 +230,7 @@
         allowfullscreen></iframe> -->
         <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "src="https://www.youtube.com/embed/xA3-KK4cRS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div class=codediv1-container><button id="mybtn" class="container" onclick="copy_data(select_txt)" ;>Copy
+    <div class=codediv1-container><button id="mybtn" class="container mybtn" onclick='copy_data("select_txt","mybtn")' ;>Copy
         Code</button>
       <pre id="select_txt" style="color: white;">
     #include&#60;iostream&#62;
@@ -258,6 +259,116 @@
   </div>
   </div>
   <!-- END OF TEMPLATE -->
+    <!-- TEMPLATE OF QUESTION TWO SUM  -->
+    <button id="Question1" class="collapsible">Two Sum </button>
+    <div class="content" style="display:flex">
+      
+      <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+        <!-- <iframe 
+          src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+          <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "src="https://www.youtube.com/embed/xA3-KK4cRS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class=codediv1-container><button id="mybtn1" class="container mybtn" onclick='copy_data("select_txt1","mybtn1")' ;>Copy
+          Code</button>
+        <pre id="select_txt1" style="color: white;">
+        #include&#60;iostream&#62;
+        #include&#60;vector&#62;
+        #include&#60;map&#62;
+        using namespace std;
+        
+        vector&#60;int&#62; twoSum(vector&#60;int&#62; &nums, int target)
+        {
+            map&#60;int,int&#62; map;
+            vector&#60;int&#62; pairs;
+            for (int i = 0; i < nums.size(); i++)
+            {
+                int searchvar = target - nums[i];
+                if (map.find(searchvar) != map.end())
+                {
+                    int Index=map.find(searchvar)->second;
+                    pairs.push_back(Index);
+                    pairs.push_back(i);
+                    break;
+                }
+                map.insert(pair&#60;int,int&#62;(nums[i], i));
+            }
+            return pairs;
+        }
+        int main()
+        {
+            vector&#60;int&#62; v = {1,2,7,15};
+            vector&#60;int&#62; ans = twoSum(v, 9);
+            for (int i = 0; i < ans.size(); i++)
+                cout << ans[i] << " ";
+            return 0;
+        }
+        
+      </pre>
+      </div>
+  
+  
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- END OF TEMPLATE TWO SUM-->
+    <!-- TEMPLATE OF QUESTION K SUM   -->
+    <button id="Question1" class="collapsible">Maximum or Minimum of all subarrays of size k</button>
+    <div class="content" style="display:flex">
+      
+      <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+        <!-- <iframe 
+          src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe> -->
+          <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "src="https://www.youtube.com/embed/xA3-KK4cRS4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class=codediv1-container><button id="mybtn2" class="container mybtn" onclick='copy_data("select_txt2","mybtn2")' ;>Copy
+          Code</button>
+        <pre id="select_txt2" style="color: white;">
+        #include&#60;iostream&#62;
+        using namespace std;
+          
+        int maxSum(int arr[], int n, int k)
+        {
+          int res = 0;
+          for (int i=0; i< k; i++) 
+              res += arr[i];
+              
+          int curr_sum = res;
+          for (int i=k; i < n; i++) 
+          {
+             curr_sum += arr[i] - arr[i-k];
+             res = max(res, curr_sum);
+          }    
+          return res;            
+        }    
+           
+        int main()
+        {
+            int arr[] = {1, 4, 2, 10, 2, 3, 1, 0, 20};
+            int k = 4;  
+            int n = sizeof(arr)/sizeof(arr[0]);  
+            cout << maxSum(arr, n, k);  
+            return 0;    
+        }  
+        
+      </pre>
+      </div>
+  
+  
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- END OF TEMPLATE K SUM -->
+  
+  
+  
   <!-- 
 <button id="Question1" class="collapsible">Reverse a Given Number</button>
 <div class="content" style="display:flex">
@@ -309,19 +420,21 @@
         }
       });
     }
-    function copy_data(containerid) {
+    function copy_data(containerid,btnid) {
       let range = document.createRange();
-      let referenceNode = document.getElementsByTagName('pre').item(0);
+      // let referenceNode = document.getElementById("select_txt").item(0);
 
-      range.selectNode(referenceNode);
+      range.selectNode(document.getElementById(containerid));
       window.getSelection().removeAllRanges();
       window.getSelection().addRange(range);
       document.execCommand("copy");
       window.getSelection().removeAllRanges();
-      document.getElementById("mybtn").innerHTML = "COPIED";
-      document.getElementById("mybtn").style.backgroundColor = "rgb(138, 212, 209)";
-
-    }
+      document.getElementById(btnid).innerHTML = "COPIED";
+      document.getElementById(btnid).style.backgroundColor = "rgb(138, 212, 209)";
+      }
+     
+    
+    
   </script>
   <marquee style="margin-top: 1%;" class="marquee_code" scrollamount="8" behavior="alternate" onmouseover="this.stop()"; 
 onmouseout ="this.start()";><div class=" op">&#60;&#60;&#60;&#60;More Questions are coming soon!!!&#62;&#62;&#62;&#62;
