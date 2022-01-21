@@ -49,7 +49,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3 {
+      #select_txt2,#select_txt3,#select_txt4 {
         font-size: 12px;
 
       }
@@ -86,7 +86,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3 {
+      #select_txt2,#select_txt3 ,#select_txt4{
         font-size: 21px;
       }
 
@@ -433,6 +433,73 @@
           }
           return 0;
         }
+      </pre>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE One Plus -->
+
+  <!-- TEMPLATE OF QUESTION Divide a String  -->
+  <button id="Question1" class="collapsible">Divide a String Into Groups of Size k</button>
+  <div class="content" style="display:flex">
+
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+     <iframe     class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
+     src="https://www.youtube.com/embed/B3GHQCu88ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class=codediv1-container><button id="mybtn4" class="container mybtn"
+        onclick='copy_data("select_txt4","mybtn4")' ;>Copy
+        Code</button>
+      <pre id="select_txt4" style="color: white;">
+        #include&#60;iostream&#62;
+        #include&#60;vector&#62;
+        using namespace std;
+          
+        vector< string > divideString(string s, int k, char fill)
+        {
+           int i = 0, flag = 0;
+           int n = s.length(), temp = k;
+           vector< string > s2;
+          
+           while (i < n)
+           {
+              string s1 = "";
+              while (temp--)
+              {
+                  if (i < n)
+                  {
+                      s1 += s[i++];
+                  }
+                  else
+                  {
+                      s1 += fill;
+                  }
+              }
+              temp = k;
+              s2.push_back(s1);
+            }
+            return s2;
+         }
+        int main() 
+        { 
+          string s="abcdefghij";
+          int k=3;
+          char fill='x';
+          vector< string > str;
+          str=divideString(s,k,fill);
+          for (int i = 0; i < str.size(); i++)
+          {
+            cout<< str[i]<<" ";
+          }
+          return 0;                
+        }
+          
+
       </pre>
     </div>
 
