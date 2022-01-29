@@ -49,7 +49,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3,#select_txt4 {
+      #select_txt2,#select_txt3,#select_txt4,#select_txt5 {
         font-size: 12px;
 
       }
@@ -86,7 +86,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3 ,#select_txt4{
+      #select_txt2,#select_txt3 ,#select_txt4,#select_txt5 {
         font-size: 21px;
       }
 
@@ -442,7 +442,7 @@
   </div>
   </div>
   </div>
-  <!-- END OF TEMPLATE One Plus -->
+  <!-- END OF TEMPLATE Divide a String -->
 
   <!-- TEMPLATE OF QUESTION Divide a String  -->
   <button id="Question1" class="collapsible">Divide a String Into Groups of Size k</button>
@@ -508,7 +508,68 @@
   </div>
   </div>
   </div>
-  <!-- END OF TEMPLATE One Plus -->
+  <!-- END OF TEMPLATE Divide a String -->
+  <!-- TEMPLATE OF QUESTION Find Minimum in Rotated Sorted Array -->
+  <button id="Question1" class="collapsible">Find Minimum in Rotated Sorted Array</button>
+  <div class="content" style="display:flex">
+
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/qgtqCt1THII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    </div>
+    <div class=codediv1-container><button id="mybtn5" class="container mybtn"
+        onclick='copy_data("select_txt5","mybtn5")' ;>Copy
+        Code</button>
+      <pre id="select_txt5" style="color: white;">
+        #include&#60;iostream&#62;
+        #include&#60;vector&#62;
+        using namespace std;
+          
+        int findMin(vector< int> nums) {
+          
+          if (nums.size() == 1) {
+            return nums[0];
+          }
+          
+          int left = 0, right = nums.size() - 1;
+
+          if (nums[right] > nums[0]) {
+            return nums[0];
+          }
+     
+          while (right >= left) {
+        
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > nums[mid + 1]) {
+              return nums[mid + 1];
+            }
+            if (nums[mid - 1] > nums[mid]) {
+              return nums[mid];
+            }
+           
+            if (nums[mid] > nums[0]) {
+              left = mid + 1;
+            } else {
+              
+              right = mid - 1;
+            }
+          }
+          return -1;
+        }
+      int main()
+      {
+          int n;
+          vector< int> v={4,5,6,7,1,2,3};
+          cout<< findMin(v);
+          return 0;
+      }
+      </pre>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE Find Minimum in Rotated Sorted Array -->
 
 
 
