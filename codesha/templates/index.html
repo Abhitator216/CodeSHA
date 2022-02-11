@@ -223,353 +223,78 @@
   <div id="qtn" style="text-align:center">
     <b>Questions:</b>
   </div>
+   <!-- TEMPLATE OF QUESTION count of prime -->
+<!-- <button id="Question1" class="collapsible">Count Of Prime</button>
+<div class="content" style="display:flex">
 
-  <!-- TEMPLATE OF QUESTION -->
-  <button id="Question1" class="collapsible">Reverse a Given Number</button>
-  <div class="content" style="display:flex">
+  <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/caWx3iuQ99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class=codediv1-container><button id="mybtn7" class="container mybtn"
+      onclick='copy_data("select_txt7","mybtn7")' ;>Copy
+      Code</button>
+    <pre id="select_txt7" style="color: white;">
+      #include&#60;iostream&#62;
+      #include&#60;stack&#62;
+      using namespace std;          
 
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-      <!-- <iframe 
-        src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe> -->
-      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "
-        src="https://www.youtube.com/embed/xA3-KK4cRS4" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-    <div class=codediv1-container><button id="mybtn" class="container mybtn" onclick='copy_data("select_txt","mybtn")'
-        ;>Copy
-        Code</button>
-      <pre id="select_txt" style="color: white;">
-    #include&#60;iostream&#62;
-    using namespace std;
-    int main()
-    {
-      int n, reverse = 0, rem;
-      cout << "Enter a number: ";
-      cin >> n;
-      while (n != 0)
-      {
-          rem = n % 10; 
-          reverse = reverse * 10 + rem;
-          n = n/10; 
-      }
-      cout << "Reversed Number: " << reverse << endl;
-      return 0;
-    }
-    </pre>
-    </div>
-
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE -->
-  <!-- TEMPLATE OF QUESTION TWO SUM  -->
-  <button id="Question1" class="collapsible">Two Sum  </button>
-  <div class="content" style="display:flex">
-
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-      <!-- <iframe 
-          src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe> -->
-      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
-        src="https://www.youtube.com/embed/Y-FAVe2Dibo" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-    <div class=codediv1-container><button id="mybtn1" class="container mybtn"
-        onclick='copy_data("select_txt1","mybtn1")' ;>Copy
-        Code</button>
-      <pre id="select_txt1" style="color: white;">
-        #include&#60;iostream&#62;
-        #include&#60;vector&#62;
-        #include&#60;map&#62;
-        using namespace std;
-        
-        vector&#60;int&#62; twoSum(vector&#60;int&#62; &nums, int target)
+        int sieve[100005];
+        void createSieve()
         {
-            map&#60;int,int&#62; map;
-            vector&#60;int&#62; pairs;
-            for (int i = 0; i < nums.size(); i++)
+            int N = 100000;
+            for (int i = 2; i < N; i++)
             {
-                int searchvar = target - nums[i];
-                if (map.find(searchvar) != map.end())
-                {
-                    int Index=map.find(searchvar)->second;
-                    pairs.push_back(Index);
-                    pairs.push_back(i);
-                    break;
-                }
-                map.insert(pair&#60;int,int&#62;(nums[i], i));
+                sieve[i] = 1;
             }
-            return pairs;
+            for (int i = 2; i * i <= N; i++)
+            {
+                if (sieve[i] == 1)
+                {
+                    for (int j = i * i; j <= N; j = j + i)
+                    {
+                        sieve[j] = 0;
+                    }
+                }
+            }
         }
+        
         int main()
         {
-            vector&#60;int&#62; v = {1,2,7,15};
-            vector&#60;int&#62; ans = twoSum(v, 9);
-            for (int i = 0; i < ans.size(); i++)
-                cout << ans[i] << " ";
+            int num, t;
+            cin >> t;
+            createSieve();
+            while (t--)
+            {
+                cin >> num;
+                int arr[num];
+                int count = 0;
+                for (int i = 0; i < num; i++)
+                {
+                    cin >> arr[i];
+                }
+        
+                for (int i = 0; i < num; i++)
+                {
+                    if (sieve[arr[i]] == 1)
+                    {
+                        count++;
+                    }
+                }
+        
+                cout << count << endl;
+            }
+        
             return 0;
         }
-        
-      </pre>
-    </div>
+    </pre>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div> -->
+<!-- END OF TEMPLATE count of prime -->
 
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE TWO SUM-->
-
-
-  <!-- TEMPLATE OF QUESTION K SUM   -->
-  <button id="Question1" class="collapsible">Maximum or Minimum of all subarrays of size k</button>
-  <div class="content" style="display:flex">
-
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-      <!-- <iframe 
-          src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe> -->
-      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
-        src="https://www.youtube.com/embed/sXiL3RpJcA4" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-    <div class=codediv1-container><button id="mybtn2" class="container mybtn"
-        onclick='copy_data("select_txt2","mybtn2")' ;>Copy
-        Code</button>
-      <pre id="select_txt2" style="color: white;">
-        #include&#60;iostream&#62;
-        using namespace std;
-          
-        int maxSum(int arr[], int n, int k)
-        {
-          int res = 0;
-          for (int i=0; i< k; i++) 
-              res += arr[i];
-              
-          int curr_sum = res;
-          for (int i=k; i < n; i++) 
-          {
-             curr_sum += arr[i] - arr[i-k];
-             res = max(res, curr_sum);
-          }    
-          return res;            
-        }    
-           
-        int main()
-        {
-            int arr[] = {4, 2, 3, 5, 1, 2};
-            int k = 3;  
-            int n = sizeof(arr)/sizeof(arr[0]);  
-            cout<< maxSum(arr, n, k);  
-            return 0;    
-        }  
-        
-      </pre>
-    </div>
-
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE K SUM -->
-
-
-  <!-- TEMPLATE OF QUESTION One Plus  -->
-  <button id="Question1" class="collapsible">Plus One on the Subset  </button>
-  <div class="content" style="display:flex">
-
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-     <iframe     class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
-     src="https://www.youtube.com/embed/B3GHQCu88ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class=codediv1-container><button id="mybtn3" class="container mybtn"
-        onclick='copy_data("select_txt3","mybtn3")' ;>Copy
-        Code</button>
-      <pre id="select_txt3" style="color: white;">
-        #include&#60;iostream&#62;
-        using namespace std;
-        void swap(int *xp, int *yp) 
-        { 
-            int temp = *xp; 
-            *xp = *yp; 
-            *yp = temp; 
-        } 
-        void bubbleSort(int arr[], int n) 
-        { 
-            int i, j; 
-            for (i = 0; i < n-1; i++)      
-            for (j = 0; j < n-i-1; j++) 
-                if (arr[j] > arr[j+1]) 
-                    swap(&arr[j], &arr[j+1]); 
-        } 
-        int main()
-        {
-            int t;                                               
-          cin >> t;
-          while (t--)
-          {
-            int n;
-            cin>>n;
-            int a[n];
-            for (int i = 0; i < n; i++)
-            {
-              cin>>a[i];
-            }
-            bubbleSort(a, n);
-            cout<< a[n-1] - a[0]<< endl;
-          }
-          return 0;
-        }
-      </pre>
-    </div>
-
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE Divide a String -->
-
-  <!-- TEMPLATE OF QUESTION Divide a String  -->
-  <button id="Question1" class="collapsible">Divide a String Into Groups of Size k</button>
-  <div class="content" style="display:flex">
-
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/qgtqCt1THII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-    </div>
-    <div class=codediv1-container><button id="mybtn4" class="container mybtn"
-        onclick='copy_data("select_txt4","mybtn4")' ;>Copy
-        Code</button>
-      <pre id="select_txt4" style="color: white;">
-        #include&#60;iostream&#62;
-        #include&#60;vector&#62;
-        using namespace std;
-          
-        vector< string > divideString(string s, int k, char fill)
-        {
-           int i = 0, flag = 0;
-           int n = s.length(), temp = k;
-           vector< string > s2;
-          
-           while (i < n)
-           {
-              string s1 = "";
-              while (temp--)
-              {
-                  if (i < n)
-                  {
-                      s1 += s[i++];
-                  }
-                  else
-                  {
-                      s1 += fill;
-                  }
-              }
-              temp = k;
-              s2.push_back(s1);
-            }
-            return s2;
-         }
-        int main() 
-        { 
-          string s="abcdefghij";
-          int k=3;
-          char fill='x';
-          vector< string > str;
-          str=divideString(s,k,fill);
-          for (int i = 0; i < str.size(); i++)
-          {
-            cout<< str[i]<<" ";
-          }
-          return 0;                
-        }
-          
-
-      </pre>
-    </div>
-
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE Divide a String -->
-  <!-- TEMPLATE OF QUESTION Find Minimum in Rotated Sorted Array -->
-  <button id="Question1" class="collapsible">Find Minimum in Rotated Sorted Array</button>
-  <div class="content" style="display:flex">
-
-    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
-      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/caWx3iuQ99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div class=codediv1-container><button id="mybtn5" class="container mybtn"
-        onclick='copy_data("select_txt5","mybtn5")' ;>Copy
-        Code</button>
-      <pre id="select_txt5" style="color: white;">
-        #include&#60;iostream&#62;
-        #include&#60;vector&#62;
-        using namespace std;
-          
-        int findMin(vector< int> nums) {
-          
-          if (nums.size() == 1) {
-            return nums[0];
-          }
-          
-          int left = 0, right = nums.size() - 1;
-
-          if (nums[right] > nums[0]) {
-            return nums[0];
-          }
-     
-          while (right >= left) {
-        
-            int mid = left + (right - left) / 2;
-            if (nums[mid] > nums[mid + 1]) {
-              return nums[mid + 1];
-            }
-            if (nums[mid - 1] > nums[mid]) {
-              return nums[mid];
-            }
-           
-            if (nums[mid] > nums[0]) {
-              left = mid + 1;
-            } else {
-              
-              right = mid - 1;
-            }
-          }
-          return -1;
-        }
-      int main()
-      {
-          int n;
-          vector< int> v={4,5,6,7,1,2,3};
-          cout<< findMin(v);
-          return 0;
-      }
-      </pre>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- END OF TEMPLATE Find Minimum in Rotated Sorted Array -->
 
 <!-- TEMPLATE OF QUESTION Valid Parentheses -->
 <button id="Question1" class="collapsible">Valid Parentheses</button>
@@ -661,80 +386,363 @@
 </div>
 </div>
 <!-- END OF TEMPLATE Valid Parentheses -->
-
-<!-- TEMPLATE OF QUESTION count of prime -->
-<!-- <button id="Question1" class="collapsible">Count Of Prime</button>
+ 
+<!-- TEMPLATE OF QUESTION Find Minimum in Rotated Sorted Array -->
+<button id="Question1" class="collapsible">Find Minimum in Rotated Sorted Array</button>
 <div class="content" style="display:flex">
 
   <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
     <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/caWx3iuQ99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div class=codediv1-container><button id="mybtn7" class="container mybtn"
-      onclick='copy_data("select_txt7","mybtn7")' ;>Copy
+  <div class=codediv1-container><button id="mybtn5" class="container mybtn"
+      onclick='copy_data("select_txt5","mybtn5")' ;>Copy
       Code</button>
-    <pre id="select_txt7" style="color: white;">
+    <pre id="select_txt5" style="color: white;">
       #include&#60;iostream&#62;
-      #include&#60;stack&#62;
-      using namespace std;          
+      #include&#60;vector&#62;
+      using namespace std;
+        
+      int findMin(vector< int> nums) {
+        
+        if (nums.size() == 1) {
+          return nums[0];
+        }
+        
+        int left = 0, right = nums.size() - 1;
 
-        int sieve[100005];
-        void createSieve()
-        {
-            int N = 100000;
-            for (int i = 2; i < N; i++)
-            {
-                sieve[i] = 1;
-            }
-            for (int i = 2; i * i <= N; i++)
-            {
-                if (sieve[i] == 1)
-                {
-                    for (int j = i * i; j <= N; j = j + i)
-                    {
-                        sieve[j] = 0;
-                    }
-                }
-            }
+        if (nums[right] > nums[0]) {
+          return nums[0];
         }
-        
-        int main()
-        {
-            int num, t;
-            cin >> t;
-            createSieve();
-            while (t--)
-            {
-                cin >> num;
-                int arr[num];
-                int count = 0;
-                for (int i = 0; i < num; i++)
-                {
-                    cin >> arr[i];
-                }
-        
-                for (int i = 0; i < num; i++)
-                {
-                    if (sieve[arr[i]] == 1)
-                    {
-                        count++;
-                    }
-                }
-        
-                cout << count << endl;
-            }
-        
-            return 0;
+   
+        while (right >= left) {
+      
+          int mid = left + (right - left) / 2;
+          if (nums[mid] > nums[mid + 1]) {
+            return nums[mid + 1];
+          }
+          if (nums[mid - 1] > nums[mid]) {
+            return nums[mid];
+          }
+         
+          if (nums[mid] > nums[0]) {
+            left = mid + 1;
+          } else {
+            
+            right = mid - 1;
+          }
         }
+        return -1;
+      }
+    int main()
+    {
+        int n;
+        vector< int> v={4,5,6,7,1,2,3};
+        cout<< findMin(v);
+        return 0;
+    }
     </pre>
   </div>
 </div>
 </div>
 </div>
 </div>
-</div> -->
-<!-- END OF TEMPLATE count of prime -->
+</div>
+<!-- END OF TEMPLATE Find Minimum in Rotated Sorted Array -->
 
-  <!-- 
+
+  <!-- TEMPLATE OF QUESTION Divide a String  -->
+  <button id="Question1" class="collapsible">Divide a String Into Groups of Size k</button>
+  <div class="content" style="display:flex">
+
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/qgtqCt1THII" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+    </div>
+    <div class=codediv1-container><button id="mybtn4" class="container mybtn"
+        onclick='copy_data("select_txt4","mybtn4")' ;>Copy
+        Code</button>
+      <pre id="select_txt4" style="color: white;">
+        #include&#60;iostream&#62;
+        #include&#60;vector&#62;
+        using namespace std;
+          
+        vector< string > divideString(string s, int k, char fill)
+        {
+           int i = 0, flag = 0;
+           int n = s.length(), temp = k;
+           vector< string > s2;
+          
+           while (i < n)
+           {
+              string s1 = "";
+              while (temp--)
+              {
+                  if (i < n)
+                  {
+                      s1 += s[i++];
+                  }
+                  else
+                  {
+                      s1 += fill;
+                  }
+              }
+              temp = k;
+              s2.push_back(s1);
+            }
+            return s2;
+         }
+        int main() 
+        { 
+          string s="abcdefghij";
+          int k=3;
+          char fill='x';
+          vector< string > str;
+          str=divideString(s,k,fill);
+          for (int i = 0; i < str.size(); i++)
+          {
+            cout<< str[i]<<" ";
+          }
+          return 0;                
+        }
+          
+
+      </pre>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE Divide a String -->
+
+
+  <!-- TEMPLATE OF QUESTION One Plus  -->
+  <button id="Question1" class="collapsible">Plus One on the Subset  </button>
+  <div class="content" style="display:flex">
+
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+     <iframe     class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
+     src="https://www.youtube.com/embed/B3GHQCu88ck" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class=codediv1-container><button id="mybtn3" class="container mybtn"
+        onclick='copy_data("select_txt3","mybtn3")' ;>Copy
+        Code</button>
+      <pre id="select_txt3" style="color: white;">
+        #include&#60;iostream&#62;
+        using namespace std;
+        void swap(int *xp, int *yp) 
+        { 
+            int temp = *xp; 
+            *xp = *yp; 
+            *yp = temp; 
+        } 
+        void bubbleSort(int arr[], int n) 
+        { 
+            int i, j; 
+            for (i = 0; i < n-1; i++)      
+            for (j = 0; j < n-i-1; j++) 
+                if (arr[j] > arr[j+1]) 
+                    swap(&arr[j], &arr[j+1]); 
+        } 
+        int main()
+        {
+            int t;                                               
+          cin >> t;
+          while (t--)
+          {
+            int n;
+            cin>>n;
+            int a[n];
+            for (int i = 0; i < n; i++)
+            {
+              cin>>a[i];
+            }
+            bubbleSort(a, n);
+            cout<< a[n-1] - a[0]<< endl;
+          }
+          return 0;
+        }
+      </pre>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE one plus  -->
+
+ <!-- TEMPLATE OF QUESTION K SUM   -->
+ <button id="Question1" class="collapsible">Maximum or Minimum of all subarrays of size k</button>
+ <div class="content" style="display:flex">
+
+   <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+     <!-- <iframe 
+         src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+         allowfullscreen></iframe> -->
+     <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
+       src="https://www.youtube.com/embed/sXiL3RpJcA4" title="YouTube video player" frameborder="0"
+       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+       allowfullscreen></iframe>
+   </div>
+   <div class=codediv1-container><button id="mybtn2" class="container mybtn"
+       onclick='copy_data("select_txt2","mybtn2")' ;>Copy
+       Code</button>
+     <pre id="select_txt2" style="color: white;">
+       #include&#60;iostream&#62;
+       using namespace std;
+         
+       int maxSum(int arr[], int n, int k)
+       {
+         int res = 0;
+         for (int i=0; i< k; i++) 
+             res += arr[i];
+             
+         int curr_sum = res;
+         for (int i=k; i < n; i++) 
+         {
+            curr_sum += arr[i] - arr[i-k];
+            res = max(res, curr_sum);
+         }    
+         return res;            
+       }    
+          
+       int main()
+       {
+           int arr[] = {4, 2, 3, 5, 1, 2};
+           int k = 3;  
+           int n = sizeof(arr)/sizeof(arr[0]);  
+           cout<< maxSum(arr, n, k);  
+           return 0;    
+       }  
+       
+     </pre>
+   </div>
+
+
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- END OF TEMPLATE K SUM -->
+
+<!-- TEMPLATE OF QUESTION TWO SUM  -->
+<button id="Question1" class="collapsible">Two Sum  </button>
+<div class="content" style="display:flex">
+
+  <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+    <!-- <iframe 
+        src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;"
+      src="https://www.youtube.com/embed/Y-FAVe2Dibo" title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </div>
+  <div class=codediv1-container><button id="mybtn1" class="container mybtn"
+      onclick='copy_data("select_txt1","mybtn1")' ;>Copy
+      Code</button>
+    <pre id="select_txt1" style="color: white;">
+      #include&#60;iostream&#62;
+      #include&#60;vector&#62;
+      #include&#60;map&#62;
+      using namespace std;
+      
+      vector&#60;int&#62; twoSum(vector&#60;int&#62; &nums, int target)
+      {
+          map&#60;int,int&#62; map;
+          vector&#60;int&#62; pairs;
+          for (int i = 0; i < nums.size(); i++)
+          {
+              int searchvar = target - nums[i];
+              if (map.find(searchvar) != map.end())
+              {
+                  int Index=map.find(searchvar)->second;
+                  pairs.push_back(Index);
+                  pairs.push_back(i);
+                  break;
+              }
+              map.insert(pair&#60;int,int&#62;(nums[i], i));
+          }
+          return pairs;
+      }
+      int main()
+      {
+          vector&#60;int&#62; v = {1,2,7,15};
+          vector&#60;int&#62; ans = twoSum(v, 9);
+          for (int i = 0; i < ans.size(); i++)
+              cout << ans[i] << " ";
+          return 0;
+      }
+      
+    </pre>
+  </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF TEMPLATE TWO SUM-->
+
+
+
+
+  <!-- TEMPLATE OF QUESTION Reverse a Given Number -->
+  <button id="Question1" class="collapsible">Reverse a Given Number</button>
+  <div class="content" style="display:flex">
+
+    <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+      <!-- <iframe 
+        src="https://www.youtube.com/embed/t3U9PwCCBY4" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+      <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%; "
+        src="https://www.youtube.com/embed/xA3-KK4cRS4" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class=codediv1-container><button id="mybtn" class="container mybtn" onclick='copy_data("select_txt","mybtn")'
+        ;>Copy
+        Code</button>
+      <pre id="select_txt" style="color: white;">
+    #include&#60;iostream&#62;
+    using namespace std;
+    int main()
+    {
+      int n, reverse = 0, rem;
+      cout << "Enter a number: ";
+      cin >> n;
+      while (n != 0)
+      {
+          rem = n % 10; 
+          reverse = reverse * 10 + rem;
+          n = n/10; 
+      }
+      cout << "Reversed Number: " << reverse << endl;
+      return 0;
+    }
+    </pre>
+    </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- END OF TEMPLATE Reverse a Given Number -->
+
+
+  
+  <!-- Basic template 
+
 <button id="Question1" class="collapsible">Reverse a Given Number</button>
 <div class="content" style="display:flex">
   <div class="embed-responsive embed-responsive-16by9 video1"   style="    background-color: #272822;" >
