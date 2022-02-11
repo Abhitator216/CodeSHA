@@ -49,7 +49,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3,#select_txt4,#select_txt5 {
+      #select_txt2,#select_txt3,#select_txt4,#select_txt5 ,#select_txt6,#select_txt7{
         font-size: 12px;
 
       }
@@ -86,7 +86,7 @@
 
       #select_txt,
       #select_txt1,
-      #select_txt2,#select_txt3 ,#select_txt4,#select_txt5 {
+      #select_txt2,#select_txt3 ,#select_txt4,#select_txt5,#select_txt6 ,#select_txt7{
         font-size: 21px;
       }
 
@@ -571,7 +571,168 @@
   </div>
   <!-- END OF TEMPLATE Find Minimum in Rotated Sorted Array -->
 
+<!-- TEMPLATE OF QUESTION Valid Parentheses -->
+<button id="Question1" class="collapsible">Valid Parentheses</button>
+<div class="content" style="display:flex">
 
+  <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/caWx3iuQ99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class=codediv1-container><button id="mybtn6" class="container mybtn"
+      onclick='copy_data("select_txt6","mybtn6")' ;>Copy
+      Code</button>
+    <pre id="select_txt6" style="color: white;">
+      #include&#60;iostream&#62;
+      #include&#60;stack&#62;
+      using namespace std;          
+          bool isValid(string s)
+          {
+          
+              stack< char> st;
+              for (int i = 0; i < s.length(); i++)
+              {
+                  char ch = s[i];
+                  if (ch == '(' || ch == '{' || ch == '[')
+                  {
+                      st.push(ch);
+                  }
+                  else if (ch == ')')
+                  {
+                      if (st.size() == 0 || st.top() != '(')
+                      {
+                          return false;
+                      }
+                      else
+                      {
+                          st.pop();
+                      }
+                  }
+                  else if (ch == '}')
+                  {
+                      if (st.size() == 0 || st.top() != '{')
+                      {
+                          return false;
+                      }
+                      else
+                      {
+                          st.pop();
+                      }
+                  }
+                  else if (ch == ']')
+                  {
+                      if (st.size() == 0 || st.top() != '[')
+                      {
+                          return false;
+                      }
+                      else
+                      {
+                          st.pop();
+                      }
+                  }
+              }
+              if (st.size() == 0)
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+          }
+          int main()
+          {
+              string s;
+              cin >> s;
+              if (isValid(s))
+              {
+                  cout << "YES";
+              }
+              else
+              {
+                  cout << "NO";
+              }
+              return 0;
+          }
+    </pre>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF TEMPLATE Valid Parentheses -->
+
+<!-- TEMPLATE OF QUESTION count of prime -->
+<button id="Question1" class="collapsible">Count Of Prime</button>
+<div class="content" style="display:flex">
+
+  <div class="embed-responsive embed-responsive-16by9 video1" style="    background-color: #272822;">
+    <iframe class="chamak" width="650" height="400" style="margin:2% 0% 0% 0%;" src="https://www.youtube.com/embed/caWx3iuQ99M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class=codediv1-container><button id="mybtn7" class="container mybtn"
+      onclick='copy_data("select_txt7","mybtn7")' ;>Copy
+      Code</button>
+    <pre id="select_txt7" style="color: white;">
+      #include&#60;iostream&#62;
+      #include&#60;stack&#62;
+      using namespace std;          
+
+        int sieve[100005];
+        void createSieve()
+        {
+            int N = 100000;
+            for (int i = 2; i < N; i++)
+            {
+                sieve[i] = 1;
+            }
+            for (int i = 2; i * i <= N; i++)
+            {
+                if (sieve[i] == 1)
+                {
+                    for (int j = i * i; j <= N; j = j + i)
+                    {
+                        sieve[j] = 0;
+                    }
+                }
+            }
+        }
+        
+        int main()
+        {
+            int num, t;
+            cin >> t;
+            createSieve();
+            while (t--)
+            {
+                cin >> num;
+                int arr[num];
+                int count = 0;
+                for (int i = 0; i < num; i++)
+                {
+                    cin >> arr[i];
+                }
+        
+                for (int i = 0; i < num; i++)
+                {
+                    if (sieve[arr[i]] == 1)
+                    {
+                        count++;
+                    }
+                }
+        
+                cout << count << endl;
+            }
+        
+            return 0;
+        }
+    </pre>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- END OF TEMPLATE count of prime -->
 
   <!-- 
 <button id="Question1" class="collapsible">Reverse a Given Number</button>
